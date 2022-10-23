@@ -1,24 +1,45 @@
-# README
+## Mario's Specialty Food Products
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### by _**(Evgeny Zbirun)**_
 
-Things you may want to cover:
+#### The application let users add a product with name, cost, made in and a review with author, text review and rating inside of it.
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+#### the project link to github: 
 
-* Database creation
+## Technologies Used:
+* VS code
+* Git console
+* Ruby on Rails
+* rspec
+* HTML elements
+* psql
+* pg Admin
 
-* Database initialization
 
-* How to run the test suite
+## Setup instructions
 
-* Services (job queues, cache servers, search engines, etc.)
+1. clone with github link.
+2. open with Visual Studio Code.
+3. run(bundle)
+4. run $ gem install rspec from your terminal for tests
+5. run (pg_ctl start) for the Postgres server
+6. run rails s to get live server run
+7. run rspec if you want to run tests
+8. make sure you have psql database up
 
-* Deployment instructions
 
-* ...
+
+## Known bugs
+ non
+
+## License
+
+Copyright <2022> Evgeny Zbirun
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
