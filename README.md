@@ -6,7 +6,7 @@
 
 
 
-#### the project link to github: 
+#### the project link to github: https://github.com/evegyzbirun/product_store1
 
 ## Technologies Used:
 * VS code
