@@ -1,6 +1,6 @@
-<h1><%= @product.name %></h1>
-<h3><%= @product.cost %></h3>
-<h3><%= @product.country_of_origin %></h3>
+<h1>Product name: <%= @product.name %></h1>
+<h3>Price: <%= @product.cost %></h3>
+<h3>Made in <%= @product.country_of_origin %></h3>
 
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this product:</h4>
@@ -8,7 +8,6 @@
   <% @product.reviews.each do |review| %>
     <ul>
       <li>
-  <%# is it right review.name or we use author? %>
         <%= link_to review.author, product_review_path(@product, review) %>
       </li>
     </ul>
