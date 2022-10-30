@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  
+  scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
+
   has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :cost, presence: true
@@ -6,6 +9,8 @@ class Product < ApplicationRecord
   validates_length_of :name, maximum: 100
 
   before_save(:titleize_product)
+
+  
 
   private
     def titleize_product

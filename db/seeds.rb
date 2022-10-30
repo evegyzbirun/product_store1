@@ -7,20 +7,50 @@ require 'faker'
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
-# Review.destroy_all
+Review.destroy_all
 
-50.times do |index|
-  Product.create!(name: Faker::Food.dish,
-                        cost: Faker::Number.decimal(l_digits: 2),
-                        country_of_origin: Faker::Address.country)
-end
+ 42.times do |index|
+  
+  product =  Product.create!(name: Faker::Food.dish,
+                          cost: Faker::Number.decimal(l_digits: 2),
+                          country_of_origin: Faker::Address.country)
 
-p "Created #{Product.count} products"
-
- 250.times do |index2|
+5.times do |index|
    Review.create!(author: Faker::Name.first_name,                  
                   content_body: Faker::Alphanumeric.alphanumeric(number: 70),
-                   rating: Faker::Number.between(from: 1, to: 5))
+                   rating: Faker::Number.between(from: 1, to: 5),
+                   product_id: product.id )
+end
  end
 
+ 5.times do |index|
+  
+  product =  Product.create!(name: Faker::Food.dish,
+                          cost: Faker::Number.decimal(l_digits: 2),
+                          country_of_origin: Faker::Address.country_by_code(code: 'US'))
+
+5.times do |index|
+   Review.create!(author: Faker::Name.first_name,                  
+                  content_body: Faker::Alphanumeric.alphanumeric(number: 70),
+                   rating: Faker::Number.between(from: 1, to: 5),
+                   product_id: product.id )
+end
+ end
+
+ 3.times do |index|
+  
+  product =  Product.create!(name: Faker::Food.dish,
+                          cost: Faker::Number.decimal(l_digits: 2),
+                          country_of_origin: Faker::Address.country_by_code(code: 'US'))
+
+7.times do |index|
+   Review.create!(author: Faker::Name.first_name,                  
+                  content_body: Faker::Alphanumeric.alphanumeric(number: 70),
+                   rating: Faker::Number.between(from: 1, to: 5),
+                   product_id: product.id )
+end
+ end
+
+ 
+ p "Created #{Product.count} products"
  p "Created #{Review.count} reviews"
