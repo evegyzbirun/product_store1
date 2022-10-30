@@ -7,7 +7,7 @@ class Product < ApplicationRecord
   validates_length_of :name, maximum: 100
   before_save(:titleize_product)
 
-
+  scope :usa_product, -> { where(country_of_origin: 'United States')} 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
   scope :most_tasks, -> {(
     select("products.id, products.name, products.role, count(reviews.id) as reviews_count")
@@ -17,7 +17,8 @@ class Product < ApplicationRecord
     .limit(3)
     )}
 
-    scope :name, -> (name_parameter) { where(name: name_parameter) } 
+    
+
   private
     def titleize_product
       self.name = self.name.titleize
