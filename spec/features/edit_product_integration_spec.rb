@@ -2,8 +2,6 @@ require 'rails_helper'
 
 describe "edit a product" do
 
-
-
   it "update product info" do
     visit new_product_path
     product = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
