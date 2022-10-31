@@ -18,9 +18,9 @@
   <p>There are no products yet.</p>
 <% end %>
 
-<h1>Made in the USA: </h1>
+<h2>Made in the USA: </h2>
 
-<% if @products.any? %>
+<% if @products.united_states.any? %>
   <ul>
     <% @products.united_states.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
@@ -44,9 +44,9 @@
 
 <h1>Products with most reviews: </h1>
 
-<% if @products.any? %>
+<% if @products.most_reviews.any? %>
   <ul>
-    <% @products.each do |product| %>
+    <% @products.most_reviews.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
