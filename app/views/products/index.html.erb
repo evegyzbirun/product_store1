@@ -1,11 +1,48 @@
 
 
 
-<h1>Products</h1>
+<h1>Products: </h1>
+
 
 <%= button_to "Create new product", 
               new_product_path,
               method: :get %>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+<h1>Made in the USA: </h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.united_states.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+<h1>Top 3 recent: </h1>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.three_most_recent.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+<h1>Products with most reviews: </h1>
 
 <% if @products.any? %>
   <ul>
