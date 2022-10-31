@@ -21,9 +21,10 @@ end
 
 describe "review" do
   product2 = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
+
+  
   it "adds a new review" do
     visit products_path
-    # product2 = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
     visit product_path(product2.id)
     click_button 'Add Review to Product'
     fill_in 'Author', :with => 'Evgeny'

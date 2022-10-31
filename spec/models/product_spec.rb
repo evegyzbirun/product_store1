@@ -4,6 +4,7 @@ describe Product do
   it { should have_many(:reviews) }
   it { should validate_length_of(:name).is_at_most(100) }
 
+
   it("has many reviews") do
     product = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
 
@@ -13,7 +14,7 @@ describe Product do
     expect(product.reviews()).to(eq([review1, review2]))
   end
 
-  it("enter info of an product") do
+  it("enter name of an product and it will be titled") do
     product = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
     expect(product.name()).to(eq("Giant Steps"))
   end
