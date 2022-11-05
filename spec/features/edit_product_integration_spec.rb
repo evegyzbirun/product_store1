@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe "edit a product" do
+  
+
 
   it "update product info" do
     visit new_product_path

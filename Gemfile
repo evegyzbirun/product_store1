@@ -56,6 +56,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'simplecov', require: false
 end
 
 group :development do

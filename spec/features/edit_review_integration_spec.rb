@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe "edit a review" do
   before:each do
+    
+
     product = Product.create({name: 'niant steps', cost: 5, country_of_origin: "USA"})
     review = Review.create({author: 'Evgeny', content_body: "We love it. You know the Grammys are a joke when Future doesn't win Best EverythingNorth America should be called Russia since people are always moving so fast. GraliticaYou say potatoe, I say starchy carbs.", rating: 3, product_id: product.id})
     visit products_path
