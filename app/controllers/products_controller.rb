@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
       flash[:notice] = "Product successfully added!"
       redirect_to products_path
     else
+      flash[:notice] = "Product wasn't added!"
       render :new, status: :unprocessable_entity
     end
   end
