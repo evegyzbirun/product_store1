@@ -8,6 +8,7 @@ require 'faker'
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
 Review.destroy_all
+User.destroy_all
 
  42.times do |index|
   
@@ -51,6 +52,16 @@ end
 end
  end
 
- 
+
+
+#  create_table :users do |t|
+#    t.column :email, :string
+#    t.column :password_hash, :string
+#    t.column :password_salt, :string
+#    t.column(:admin, :boolean)
+
+
+
+# p "Created #{User.count} users"
  p "Created #{Product.count} products"
  p "Created #{Review.count} reviews"
