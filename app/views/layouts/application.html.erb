@@ -11,7 +11,7 @@
 
   <body>
      <div class='container'>
-    <% if current_user && current_user.admin  %>
+    <% if current_user || current_user.admin  %>
       <%= current_user.email  %> admin | <%= link_to "Sign out", '/signout' %>
     <% elsif current_user %>
       <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>

@@ -8,7 +8,7 @@ require 'faker'
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
 Review.destroy_all
-# User.destroy_all
+# Session.destroy_all
 
  42.times do |index|
   
@@ -77,6 +77,6 @@ end
 
 
 
-# p "Created #{User.count} users"
+# p "Created #{Session.count} users"
 p "Created #{Product.count} products"
 p "Created #{Review.count} reviews"
