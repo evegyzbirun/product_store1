@@ -2,7 +2,7 @@
 
 #### by _**(Evgeny Zbirun)**_
 
-#### The application let users add a product with name, cost, made in and a review with author, text review and rating inside of it.
+#### The application let users to register for using the website which let the user add a product with name, cost, made in and a review with author, text review and rating inside of it.
 
 
 
@@ -16,6 +16,7 @@
 * HTML elements
 * psql
 * pg Admin
+* bcrypt
 
 
 ## Setup instructions
