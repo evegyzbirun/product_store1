@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  # root "products#index"
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'

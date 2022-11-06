@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  before_action :authorize, except: [:index]
+  before_action :authorize_admin, only: [:destroy]
+
   def index
     @products = Product.all
     render :index
@@ -12,6 +15,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
+      flash[:notice] = "Product successfully added!"
       redirect_to products_path
     else
       render :new, status: :unprocessable_entity
