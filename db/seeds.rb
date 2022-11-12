@@ -8,7 +8,7 @@ require 'faker'
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
 Review.destroy_all
-# Session.destroy_all
+User.destroy_all
 
  42.times do |index|
   
@@ -52,31 +52,25 @@ end
 end
  end
 
-#  1.times do |index|
-  
-#   User.create!(email: Faker::Internet.email,
-#                                  password_hash:Faker::Internet.password(8) ,
-#                                  cpassword_salt:Faker::Internet.password(8) ,
-#                                  admin: true )
-#  end
  
-#  1.times do |index|
-#     User.create!(email: Faker::Internet.email,
-#                                  password_hash:Faker::Internet.password(8) ,
-#                                  cpassword_salt:Faker::Internet.password(8) ,
-#                                  admin: false )
-#  end
+  
+   User.create!(email: "zbirun2@gmail.com",
+                                 password:"qwerty",
+                                 password_confirmation:"qwerty",
+                                 admin: true )
+ 
+ 
+   User.create!(email: "zbirun1@gmail.com",
+                                 password:"qwerty",
+                                 password_confirmation:"qwerty",
+                                 admin: false )
   
  
 
-#  create_table :users do |t|
-#    t.column :email, :string
-#    t.column :password_hash, :string
-#    t.column :password_salt, :string
-#    t.column(:admin, :boolean)
 
 
 
-# p "Created #{Session.count} users"
+
+p "Created #{User.count} users"
 p "Created #{Product.count} products"
 p "Created #{Review.count} reviews"
