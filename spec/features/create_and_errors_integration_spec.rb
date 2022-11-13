@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe "product" do
+  before :each do
+    visit signup_path
+    User.create!(email: "play@gmail.com", password:"play",password_confirmation:"play", admin: true )
+    visit signin_path
+    fill_in "email", :with => "play@gmail.com"
+    fill_in "password", :with => "play"
+    click_button "Sign in"
+  end
+
   it "adds a new product" do
     visit products_path
     click_button 'Create new product'
@@ -32,6 +41,15 @@ describe "product" do
 end
 
 describe "review" do
+  before :each do
+    visit signup_path
+    User.create!(email: "play@gmail.com", password:"play",password_confirmation:"play", admin: true )
+    visit signin_path
+    fill_in "email", :with => "play@gmail.com"
+    fill_in "password", :with => "play"
+    click_button "Sign in"
+  end
+
   product2 = Product.create({name: "giant steps", cost: 5, country_of_origin: "USA"})
 
 

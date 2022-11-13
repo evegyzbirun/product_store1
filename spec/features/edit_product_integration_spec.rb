@@ -1,7 +1,14 @@
 require 'rails_helper'
 
 describe "edit a product" do
-  
+  before :each do
+    visit signup_path
+    User.create!(email: "play@gmail.com", password:"play",password_confirmation:"play", admin: true )
+    visit signin_path
+    fill_in "email", :with => "play@gmail.com"
+    fill_in "password", :with => "play"
+    click_button "Sign in"
+  end
 
 
   it "update product info" do
