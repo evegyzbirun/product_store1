@@ -27,8 +27,9 @@
 4. run $ gem install rspec from your terminal for tests
 5. run (pg_ctl start) for the Postgres server
 6. run rails s to get live server run
-7. run rspec if you want to run tests
-8. make sure you have psql database up
+7. Make sure to use rails c and make an admin or user for the website: User.create!(email: "any@gmail.com", password:"any",password_confirmation:"any", admin: false/true )
+8. run rspec if you want to run tests
+9. make sure you have psql database up
 
 
 
